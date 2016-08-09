@@ -1,0 +1,1 @@
+require('./specs/home_basic.spec.js').toWork();

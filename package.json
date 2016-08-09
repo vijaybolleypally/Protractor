@@ -1,0 +1,28 @@
+{
+  "name": "protractor-tests",
+  "version": "1.0.0",
+  "description": "Protractor Framework - reusable for any project",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/VijayBolleypally/protractortests"
+  },
+  "engines": {
+    "node": "4.2.1"
+  },
+  "scripts": {
+    "install": "node node_modules/protractor/bin/webdriver-manager update"
+  },
+  "author": "Vijay.B",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "graceful-fs": "^4.1.4",
+    "chromedriver": "latest",
+    "jasmine": "^2.4.1",
+    "jasmine-spec-reporter": "^2.5.0",
+    "protractor": "^4.0.0",
+    "protractor-jasmine2-screenshot-reporter": "^0.3.2",
+    "webdriver-manager": "^10.2.1"
+  }
+}

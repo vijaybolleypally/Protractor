@@ -1,0 +1,9 @@
+exports.currentLang = "US_En";
+exports.getStartedBtnText = "Get Started";
+exports.headlineHeroLogoText1 = "One framework";
+exports.headlineHeroLogoText2 = "Mobile and desktop.";
+exports.featuresHeader = "Features";
+exports.docsHeader ="Docs";
+exports.eventsHeader ="Events";
+exports.newsHeader ="News";
+exports.fileHeader ="none";

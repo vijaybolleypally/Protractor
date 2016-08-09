@@ -23,9 +23,78 @@ This framework is designed in style that follows [Protractor Styleguide](https:/
 ----------
 Project Structure
 -------------
-![Framework_Strc.png](https://bitbucket.org/repo/8BoAEo/images/2086113539-Framework_Strc.png)
 
-**In Details:**
+---------
+
+<i class="icon-folder-open"></i> **data**
+
+:  <i class="icon-folder-open"></i> **app_data**
+> <i class="icon-file"></i> application_data.US_En.js
+
+:  <i class="icon-folder-open"></i> **run_data**
+> <i class="icon-file"></i> application_data.js
+>  <i class="icon-file"></i> user_data.js
+
+:  <i class="icon-folder-open"></i> **user_data**
+>  <i class="icon-file"></i> user_data.US_En.Env_Prod.js
+
+<i class="icon-folder-open"></i>  **downloads**
+
+<i class="icon-folder-open"></i>  **features**
+
+:  <i class="icon-folder-open"></i> **featureName1**
+
+: -		<i class="icon-folder-open"></i> **po**
+
+: > <i class="icon-file"></i> **featureName1.po.js**
+: > <i class="icon-file"></i> **featureName1.co.js**
+
+: -		<i class="icon-folder-open"></i> **specs**
+: > <i class="icon-file"></i> **featureName1.spec.js**
+
+: -		<i class="icon-file"></i> **featureName1.suite.js**
+
+<i class="icon-folder-open"></i> **node_modules**
+
+<i class="icon-folder-open"></i> **test_reports**
+
+:  <i class="icon-folder-open"></i> **html_reports**
+
+: -		<i class="icon-folder-open"></i> **FailedTestsScreenshots**
+
+: -		<i class="icon-file"></i> **Myreports.html**
+
+:  <i class="icon-folder-open"></i> **json_reports**
+
+: -		<i class="icon-folder-open"></i> **Testresult.json**
+
+<i class="icon-folder-open"></i> **utility**
+
+:  <i class="icon-folder-open"></i> **utilities.js**
+
+
+<i class="icon-file"></i> **.gitignore**
+
+<i class="icon-file"></i> **About Protractor Test Framework.html**
+
+<i class="icon-file"></i> **gulpfile.js**
+
+<i class="icon-file"></i> **my.html.report.js**
+
+<i class="icon-file"></i> **my-styles.css**
+
+<i class="icon-file"></i> **package.json**
+
+<i class="icon-file"></i> **protractor.conf.js**
+
+<i class="icon-file"></i> **protractor.prepare.js**
+
+<i class="icon-file"></i> **README.md**
+
+<i class="icon-file"></i> **setUpGlobals.js**
+
+------
+**Project Structure Explanation:**
 
 *data*
 

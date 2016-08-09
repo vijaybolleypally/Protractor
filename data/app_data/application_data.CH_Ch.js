@@ -1,0 +1,9 @@
+exports.currentLang = "CH_Ch";
+exports.getStartedBtnText = "开始吧！";
+exports.headlineHeroLogoText1 = "一套框架，多种平台";
+exports.headlineHeroLogoText2 = "一套框架，多种平台";
+exports.featuresHeader = "特性";
+exports.docsHeader ="文档";
+exports.eventsHeader ="会议";
+exports.newsHeader ="新闻";
+exports.fileHeader ="新闻";
