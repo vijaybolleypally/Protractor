@@ -1,9 +1,14 @@
-exports.currentLang = "US_En";
-exports.getStartedBtnText = "Get Started";
-exports.headlineHeroLogoText1 = "One framework";
-exports.headlineHeroLogoText2 = "Mobile and desktop.";
-exports.featuresHeader = "Features";
-exports.docsHeader ="Docs";
-exports.eventsHeader ="Events";
-exports.newsHeader ="News";
-exports.fileHeader ="none";
+var userData = require('../run_data/user_data');
+var appData = function () {
+    this.currentLang = "US_En";
+    this.getStartedBtnText = "Get Started";
+    this.headlineHeroLogoText1 = "One framework";
+    this.headlineHeroLogoText2 = "Mobile and desktop.";
+    this.featuresHeader = "Features";
+    this.docsHeader = "Docs";
+    this.eventsHeader = "Events";
+    this.newsHeader = "News";
+    this.fileHeader = "none";
+};
+
+module.exports = new appData();

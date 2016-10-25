@@ -16,8 +16,6 @@
   "license": "UNLICENSED",
   "private": true,
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "graceful-fs": "^4.1.4",
     "chromedriver": "latest",
     "jasmine": "^2.4.1",
     "jasmine-spec-reporter": "^2.5.0",

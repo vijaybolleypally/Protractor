@@ -16,9 +16,10 @@ This framework is designed in style that follows [Protractor Styleguide](https:/
 > - To run automated tests on multi environment with minimal efforts
 > - Run tests in Parallel at suite level
 > - Reusable methods for page interactions
+> - Customized user actions
 > - Html reports for parallel test with failed issues screenshots
 > - Page Object Model of Tests
-> - Instead of '...FFF' representation in console this frame work will show Real time test details in console [Sample](https://raw.githubusercontent.com/bcaudan/jasmine-spec-reporter/master/screenshot.png)
+> - Test Results representation in console is made clear Instead of showing '...FFF' [Sample](https://raw.githubusercontent.com/bcaudan/jasmine-spec-reporter/master/screenshot.png)
 
 ----------
 Project Structure
@@ -71,8 +72,12 @@ Project Structure
 : json_reports:
     >- Testresult.json all test result shown in json format
 
-**utility/utilities.js**
-> - All utility methods like wait for element display/disappear, wait for click, isElementPresent etc are stored here for usability
+**utility**
+: utilities.js:
+    > - All utility methods like wait for element display/disappear, wait for click, isElementPresent etc are stored here for usability
+
+: user_actions.js:
+    > - All customised user actions like click,type and mouse hover etc are available here and highlight the element before interaction and logging is provided from this file
 
 **gulpfile.js**
 > - gulp file with task to run(currently we don’t have any gulp tasks)
@@ -117,18 +122,20 @@ Demo
 -------------
 
 **Prerequisites:**
-> - Install Nodejs and NPM
+> - Install Nodejs and NPM (npm version should be 3 +)
 > - Run npm install at project root directory (i.e protractortests/)
 
 **How to run and view reports:**
 
-1. Run *node setUpGlobals* with environmnet and language specific to your test run
+1. Run *node setUpGlobals* with environment and language specific to your test run
 
-    > Example: node setUpGlobals Prod FR_Fn means French language and production env is selected (by default QA and US_En is taken if no info given)
+    > Example: node setUpGlobals Prod FR_Fn means French language and production env is selected 
+    (by default QA and US_En is taken if no info given,and environment name,language is not case sensitive but they keyword that is given
+    should match with file name in data folder)
 
 2. Run *protractor protractor.conf.js* to run all suites
 
-     >  protractor protractor.conf.js --suite [login to run only login suite]
+     >  protractor protractor.conf.js --suite login [to run only login suite]
 
 3. Open *test_reports/html_reports/Myreports.html* to view run results
 
@@ -137,6 +144,17 @@ Demo
 4. Test results in console after test run
 
 	>![sampleReport](https://raw.githubusercontent.com/bcaudan/jasmine-spec-reporter/master/screenshot.png)
+
+**How to user application data,user data,utilities and customized user actions:**
+
+1. Our Framework has browser params (userData,applicationData,userActions,utilities)
+
+2. Create a reference to this file where ever you need (at po or specs or in suite)
+    Example var appData = require(browser.params.applicationData);
+    
+3. User its methods with respective parameters
+
+See features/docs/specs/docs_basic.spec.js file for example
 
 ----------
 Tools Used

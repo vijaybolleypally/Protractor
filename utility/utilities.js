@@ -86,13 +86,20 @@ var Utills = function () {
     };
 
     this.mouseToElement = function (givenElement) {
-        this.waitForElementDisplay(givenElement, this.shortWaitTime);
         return browser.actions().mouseMove(givenElement).perform();
     };
 
     this.rightClickOnElement = function (givenElement) {
         browser.actions().mouseMove(givenElement).perform();
         browser.actions().click(protractor.Button.RIGHT).perform();
+    };
+
+    this.getRandomNumber = function () {
+        return new Date().getTime();
+    };
+
+    this.dragDrop = function (dragElement, dropElement) {
+        browser.actions().dragAndDrop(dragElement, dropElement).perform();
     };
 };
 
