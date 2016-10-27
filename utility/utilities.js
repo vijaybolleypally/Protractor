@@ -2,6 +2,8 @@ var Utills = function () {
     var EC = protractor.ExpectedConditions;
     this.shortWaitTime = 5000;
     this.longWaitTime = 60000;
+    var fs = require('fs');
+    var self = this;
 
     this.waitForElementToBeClickable = function (pageElement, waitTime) {
         browser.wait(EC.elementToBeClickable(pageElement), waitTime);
@@ -100,6 +102,20 @@ var Utills = function () {
 
     this.dragDrop = function (dragElement, dropElement) {
         browser.actions().dragAndDrop(dragElement, dropElement).perform();
+    };
+
+    this.deleteFolderRecursive = function (path) {
+        if (fs.existsSync(path)) {
+            fs.readdirSync(path).forEach(function (file, index) {
+                var curPath = path + "/" + file;
+                if (fs.lstatSync(curPath).isDirectory()) { // recurse
+                    self.deleteFolderRecursive(curPath);
+                } else { // delete file
+                    fs.unlinkSync(curPath);
+                }
+            });
+            fs.rmdirSync(path);
+        }
     };
 };
 

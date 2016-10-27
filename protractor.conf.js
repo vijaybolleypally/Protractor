@@ -50,7 +50,8 @@ exports.config = {
         applicationData: __dirname + "/data/run_data/application_data.js",
         userActions: __dirname + "/utility/user_actions",
         utilities: __dirname + "/utility/utilities",
-        logging: false
+        logging: false,
+        aggregateReporting: false
     },
 
     resultJsonOutputFile: "test_reports/json_reports/Testresult.json",

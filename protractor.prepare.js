@@ -2,6 +2,11 @@ exports.toWork = function (reporter) {
     //  console.log("############# onPrepare Blocked called #############");
     var mkdirp = require('mkdirp');
     var fs = require('fs');
+    var util = require(browser.params.utilities);
+
+    //Delete all previous reports data
+    browser.params.aggregateReporting ? console.log("aggregateReporting is ON") : util.deleteFolderRecursive('test_reports');
+    browser.params.aggregateReporting ? console.log("aggregateReporting is ON") : util.deleteFolderRecursive('target');
 
     //Browser Settings:
     browser.driver.manage().timeouts().implicitlyWait(2000);
@@ -22,5 +27,20 @@ exports.toWork = function (reporter) {
     }));
 
     //Html Screenshot reporter
+    mkdirp.sync('test_reports/html_reports');
     jasmine.getEnv().addReporter(reporter);
+
+    //Using Allure Reporter
+    var AllureReporter = require('jasmine-allure-reporter');
+    jasmine.getEnv().addReporter(new AllureReporter({
+        resultsDir: 'test_reports/allure-results'
+    }));
+    jasmine.getEnv().afterEach(function (done) {
+        browser.takeScreenshot().then(function (png) {
+            allure.createAttachment('Screenshot', function () {
+                return new Buffer(png, 'base64')
+            }, 'image/png')();
+            done();
+        })
+    });
 }
