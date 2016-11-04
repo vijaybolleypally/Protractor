@@ -5,7 +5,7 @@ exports.toWork = function (reporter) {
     var util = require(browser.params.utilities);
 
     //Delete all previous reports data
-    browser.params.aggregateReporting ? console.log("aggregateReporting is ON") : util.deleteFolderRecursive('test_reports');
+    browser.params.aggregateReporting ? console.log("aggregateReporting is ON") : util.deleteFolderRecursive('test_reports/allure-results');
     browser.params.aggregateReporting ? console.log("aggregateReporting is ON") : util.deleteFolderRecursive('target');
 
     //Browser Settings:
@@ -27,7 +27,6 @@ exports.toWork = function (reporter) {
     }));
 
     //Html Screenshot reporter
-    mkdirp.sync('test_reports/html_reports');
     jasmine.getEnv().addReporter(reporter);
 
     //Using Allure Reporter
