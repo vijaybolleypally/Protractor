@@ -22,6 +22,8 @@
     "protractor": "^4.0.0",
     "protractor-jasmine2-screenshot-reporter": "^0.3.2",
     "webdriver-manager": "^10.2.1",
-    "jasmine-allure-reporter": "latest"
+    "jasmine-allure-reporter": "latest",
+    "jenkins-client": "latest",
+    "jenkins-api": "latest"
   }
 }
