@@ -18,12 +18,12 @@
   "devDependencies": {
     "chromedriver": "latest",
     "jasmine": "^2.4.1",
+    "jasmine-allure-reporter": "latest",
     "jasmine-spec-reporter": "^2.5.0",
+    "jenkins-api": "^0.3.1",
+    "jenkins-client": "latest",
     "protractor": "^4.0.0",
     "protractor-jasmine2-screenshot-reporter": "^0.3.2",
-    "webdriver-manager": "^10.2.1",
-    "jasmine-allure-reporter": "latest",
-    "jenkins-client": "latest",
-    "jenkins-api": "latest"
+    "webdriver-manager": "^10.2.1"
   }
 }
