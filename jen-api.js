@@ -15,7 +15,7 @@ function getStatusFromColor(color) {
   }
 });
 
-//
+// Sample Out PUT
 //$ node jen-api.js
 //Job : api_test is Pass
 //Job : code_deploy is Pass
