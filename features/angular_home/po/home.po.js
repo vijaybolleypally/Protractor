@@ -3,8 +3,7 @@ var userData = require(browser.params.userData);
 
 var HomePage = function () {
 
-  this.homeHeader = $('.hero-logo[src="/resources/images/logos/angular2/angular.svg"]');
-
+  this.homeHeader = $('.hero-logo img[src="assets/images/logos/angular/angular.svg"]');
 };
 
 module.exports = new HomePage();

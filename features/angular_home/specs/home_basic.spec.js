@@ -7,8 +7,9 @@ var userData = require(browser.params.userData);
 exports.toWork = function () {
 
     describe('Home Page Basic Specs', function () {
-        var headerExpectedText = [appData.featuresHeader, appData.docsHeader, appData.eventsHeader, appData.newsHeader, appData.fileHeader];
-        var uppers = headerExpectedText.map(function (x) {
+      var headerExpectedText = [appData.featuresHeader, appData.docsHeader, appData.resourcesHeader,
+         appData.eventsHeader, appData.blogHeader];
+         var uppers = headerExpectedText.map(function (x) {
             return x.toUpperCase();
         });
 

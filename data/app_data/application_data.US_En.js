@@ -6,9 +6,9 @@ var appData = function () {
     this.headlineHeroLogoText2 = "Mobile and desktop.";
     this.featuresHeader = "Features";
     this.docsHeader = "Docs";
+    this.resourcesHeader = "Resources";
     this.eventsHeader = "Events";
-    this.newsHeader = "News";
-    this.fileHeader = "none";
+    this.blogHeader = "Blog";
 };
 
 module.exports = new appData();
